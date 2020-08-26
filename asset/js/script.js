@@ -4,41 +4,19 @@ $( document ).ready(function() {
 
   $('#thumbnail-grid').load("thumbnail-index.html");
   // hover behavior
-  var default_state = true;
 
     $("#cell-right").hover(
       function() {
-        default_state = false;
-        $("#col-left").addClass("col-shrink");
-        $("#col-right").addClass("col-grow");
-        setTimeout(function() {
-          $(".thumbnail").addClass("thumbnail-shrink");
-        }, 500);
-
-      }, function() {
-        $("#col-left").removeClass("col-shrink");
-        $("#col-right").removeClass("col-grow");
-        setTimeout(function() {
-          $(".thumbnail").removeClass("thumbnail-shrink");
-        }, 250);
+        $("#col-left").toggleClass("col-shrink");
+        $("#col-right").toggleClass("col-grow");
       }
     );
 
     $("#cell-left").hover(
       function() {
         default_state = false;
-        $("#col-right").addClass("col-shrink");
-        $("#col-left").addClass("col-grow");
-        setTimeout(function() {
-          $(".thumbnail").addClass("thumbnail-grow");
-        }, 500);
-
-      },function() {
-        $("#col-right").removeClass("col-shrink");
-        $("#col-left").removeClass("col-grow");
-        setTimeout(function() {
-          $(".thumbnail").removeClass("thumbnail-grow");
-        }, 250);
+        $("#col-right").toggleClass("col-shrink");
+        $("#col-left").toggleClass("col-grow");
       }
     );
 

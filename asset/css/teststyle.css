@@ -118,16 +118,10 @@
 }
 
   .thumbnail {
-    width:33.33%;
+    width:25%;
     transition: none;
   }
 
-  .thumbnail-grow {
-    width:25% !important;
-  }
-  .thumbnail-shrink {
-    width:50%;
-  }
   .thumbnail img{
     object-fit: cover;
     width:100%;
